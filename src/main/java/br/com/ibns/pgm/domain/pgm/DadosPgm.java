@@ -1,6 +1,6 @@
-package br.com.ibns.pgm.pgm;
+package br.com.ibns.pgm.domain.pgm;
 
-import br.com.ibns.pgm.endereco.DadosEndereco;
+import br.com.ibns.pgm.domain.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

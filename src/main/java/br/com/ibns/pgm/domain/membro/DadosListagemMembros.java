@@ -1,4 +1,4 @@
-package br.com.ibns.pgm.membro;
+package br.com.ibns.pgm.domain.membro;
 
 public record DadosListagemMembros(
 

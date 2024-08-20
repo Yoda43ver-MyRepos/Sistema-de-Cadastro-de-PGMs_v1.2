@@ -1,4 +1,4 @@
-package br.com.ibns.pgm.endereco;
+package br.com.ibns.pgm.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

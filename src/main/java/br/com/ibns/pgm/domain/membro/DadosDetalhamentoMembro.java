@@ -1,7 +1,6 @@
-package br.com.ibns.pgm.membro;
+package br.com.ibns.pgm.domain.membro;
 
-import br.com.ibns.pgm.endereco.DadosEndereco;
-import br.com.ibns.pgm.endereco.Endereco;
+import br.com.ibns.pgm.domain.endereco.Endereco;
 
 public record DadosDetalhamentoMembro(
         Long id,

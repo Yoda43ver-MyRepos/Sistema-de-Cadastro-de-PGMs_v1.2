@@ -1,4 +1,4 @@
-package br.com.ibns.pgm.pgm;
+package br.com.ibns.pgm.domain.pgm;
 
 public record DadosListagemPgms(
         Long id,
