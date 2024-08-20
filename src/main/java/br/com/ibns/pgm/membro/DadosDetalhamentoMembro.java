@@ -9,7 +9,8 @@ public record DadosDetalhamentoMembro(
         String telefone,
         String email,
         String aniversario,
-        Endereco endereco
+        Endereco endereco,
+        Boolean ativo
 ) {
     public DadosDetalhamentoMembro(Membro membro){
         this(
@@ -18,7 +19,8 @@ public record DadosDetalhamentoMembro(
                 membro.getTelefone(),
                 membro.getEmail(),
                 membro.getAniversario(),
-                membro.getEndereco()
+                membro.getEndereco(),
+                membro.getAtivo()
         );
     }
 

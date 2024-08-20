@@ -53,4 +53,10 @@ public class MembroController {
           membro.inativar();
           return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity detalharMembro(@PathVariable Long id){
+        var membro =  repository.getReferenceById(id);
+        return ResponseEntity.ok(new DadosDetalhamentoMembro(membro));
+    }
 }

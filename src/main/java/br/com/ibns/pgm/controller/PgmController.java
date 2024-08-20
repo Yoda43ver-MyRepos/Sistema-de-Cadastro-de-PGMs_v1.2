@@ -10,7 +10,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.function.EntityResponse;
 import org.springframework.web.util.UriComponentsBuilder;
 
 
@@ -57,6 +56,12 @@ public class PgmController {
     public ResponseEntity atualizarPgmDados(@RequestBody @Valid DadosAtualizacaoPgms dados){
         var pgm = repository.getReferenceById(dados.id());
         pgm.atualizarDadosPgm(dados);
+        return ResponseEntity.ok(new DadosDetalhamentoPgm(pgm));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity detalharPgm(@PathVariable Long id) {
+        var pgm = repository.getReferenceById(id);
         return ResponseEntity.ok(new DadosDetalhamentoPgm(pgm));
     }
 
