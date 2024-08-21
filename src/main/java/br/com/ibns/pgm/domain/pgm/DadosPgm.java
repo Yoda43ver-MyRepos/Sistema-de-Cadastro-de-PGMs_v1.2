@@ -7,16 +7,16 @@ import jakarta.validation.constraints.Size;
 
 public record DadosPgm(
 
-        @NotBlank
-        @Size(min = 2, max = 40)
+        @Size(min = 3, max = 100, message="{nome.tamanho}")
+        @NotBlank(message = "{nome.obrigatorio}")
         String nome,
 
-        @NotBlank
-        @Size(min = 2, max = 20)
+        @NotBlank (message="{dia.obrigatorio}")
+        @Size(min = 2, max = 20, message="{nome.tamanho}")
         String dia,
 
-        @NotBlank
-        @Size(min = 2, max = 15)
+        @NotBlank (message="{hora.obrigatorio}")
+        @Size(min = 2, max = 15, message="{hora.tamanho}")
         String hora,
 
         @NotNull

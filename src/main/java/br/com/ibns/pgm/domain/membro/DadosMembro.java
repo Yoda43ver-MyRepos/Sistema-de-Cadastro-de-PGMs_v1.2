@@ -5,19 +5,18 @@ import jakarta.validation.constraints.*;
 
 public record DadosMembro(
 
-        @NotBlank
-        @Size(min = 2, max = 100)
+        @Size(min = 3, max = 100, message="{nome.tamanho}")
+        @NotBlank(message = "{nome.obrigatorio}")
         String nome,
 
-        @NotBlank
-        @Pattern(regexp = "^\\(\\d{2}\\)\\s\\d{5}-\\d{4}$", message = "Número de telefone inválido: exemplo => (xx) xxxxxxxxx")
+        @NotBlank(message = "{telefone.obrigatorio}")
         String telefone,
 
-        @NotBlank
-        @Email
+        @NotBlank(message = "{email.obrigatorio}")
+        @Email(message = "{email.formato}")
         String email,
 
-        @Pattern(regexp = "^\\d{2}/\\d{2}$", message = "Data de aniversário inválida. Formato esperado: dd/MM")
+        @Pattern(regexp = "^\\d{2}/\\d{2}$", message = "{aniversario.formato}")
         String aniversario,
 
         @NotNull
